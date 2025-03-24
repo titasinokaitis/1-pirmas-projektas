@@ -1,0 +1,26 @@
+{
+  "name": "1-pirmas-projektas",
+  "version": "1.0.0",
+  "description": "pirmas projektas",
+  "main": "index.js",
+  "scripts": {
+    "function": "node --watch ./js/3-function.js",
+    "nd": "node --watch ./js/Namu-Darbai/1-namu-darbai.js",
+    "ws": "node --watch ./js/Namu-Darbai/workshop.js",
+    "if": "node --watch ./js/5-if.js",
+    "boolean": "node --watch ./js/4-boolean.js",
+    "zodis": "node --watch ./js/zodis.js",
+    "testas": "node --watch ./js/test.js",
+    "string": "node --watch ./js/2-string.js",
+    "nr1": "node --watch ./js/1-number.js",
+    "js": "node --watch ./index.js",
+    "test": "testavimas"
+  },
+  "keywords": [
+    "pirmas",
+    "java",
+    "code"
+  ],
+  "author": "Titas",
+  "license": "ISC"
+}
