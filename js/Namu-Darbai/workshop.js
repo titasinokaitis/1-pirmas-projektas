@@ -35,6 +35,26 @@ MokinioVidurkis (mokinys1)
 MokinioVidurkis (mokinys2)
 MokinioVidurkis (mokinys3)
 
+/*2 užduotis - filmų rekomendacija:
+
+Susikurkite bent 5 sąrašo tipo kintamuosius, kurių pirmas narys yra filmo pavadinimas, 
+antras narys yra filmo žanras,
+ o trečias narys yra skaičiaus tipo filmo įvertis.
+Susikurkite 2 kintamuosius kurie
+ -pirmas nurodo jūsų mėgstamą žanrą ir antras nurodo jūsų norimą matyti filmo įvertį.
+Padarykite funkciją, kuri iš pasirinktų 3 filmų, 
+pagal jūsų norimą žanrą ir įvertį išveda į console kokie filmai jums patiktų.
+ Jei joks filmas netinka, turi tai pranešti.
+*/
+
+const filmoPavadinimas = ['Armagedonas', 'Titanikas', 'Krikstatevis', 'Twin Peaks', 'Hangover'];
+const zanras = ['action', 'drama', 'mafia', 'horror', 'comedy'];
+const ivertinimas = [1, 2, 3, 4, 5];
+
+let megstamasZanras = zanras;
+let filmoIvertinimas = ivertinimas;
+
+
 
 
 

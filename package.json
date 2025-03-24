@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "function": "node --watch ./js/3-function.js",
+    "array": "node --watch ./js/6-array.js",
     "nd": "node --watch ./js/Namu-Darbai/1-namu-darbai.js",
     "ws": "node --watch ./js/Namu-Darbai/workshop.js",
     "if": "node --watch ./js/5-if.js",
