@@ -5,7 +5,12 @@
   "main": "index.js",
   "scripts": {
     "function": "node --watch ./js/3-function.js",
+    "adult": "node --watch ./js/task/adult.js",
+    "textsize": "node --watch ./js/task/text-size.js",
+    "multiply": "node --watch ./js/task/multiply.js",
+    "marksaverage": "node --watch ./js/task/marks-average.js",
     "array": "node --watch ./js/6-array.js",
+    "typeof": "node --watch ./js/7-typeof.js",
     "nd": "node --watch ./js/Namu-Darbai/1-namu-darbai.js",
     "ws": "node --watch ./js/Namu-Darbai/workshop.js",
     "if": "node --watch ./js/5-if.js",
