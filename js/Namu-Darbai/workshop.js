@@ -19,6 +19,7 @@ function MokinioVidurkis (mokinys){
         console.log(mokinys[0] + ' neislaike. Jo dabartinis vidurkis: ' + vidurkis);
         console.log(vidurkisnaujas);
         if(vidurkisnaujas >=3.5)
+            
     {
         console.log(mokinys[0] + ' islaikytu kursa jeigu gautu viena 10' );}
     
@@ -47,15 +48,27 @@ pagal jūsų norimą žanrą ir įvertį išveda į console kokie filmai jums pa
  Jei joks filmas netinka, turi tai pranešti.
 */
 
-const filmoPavadinimas = ['Armagedonas', 'Titanikas', 'Krikstatevis', 'Twin Peaks', 'Hangover'];
-const zanras = ['action', 'drama', 'mafia', 'horror', 'comedy'];
-const ivertinimas = [1, 2, 3, 4, 5];
+// Filmai: [pavadinimas, žanras, įvertis]
+const filmas1 = ["Inception", "Sci-Fi", 9];
+const filmas2 = ["The Dark Knight", "Action", 10];
+const filmas3 = ["Interstellar", "Sci-Fi", 8];
+const filmas4 = ["Titanic", "Romance", 7];
+const filmas5 = ["The Godfather", "Crime", 10];
 
-let megstamasZanras = zanras;
-let filmoIvertinimas = ivertinimas;
+// Pageidaujamas žanras ir įvertis
+const megstamasZanras = "Sci-Fi";
+const norimasIvertis = 8;
 
+function rekomenduotiFilmus(filmai, zanras, ivertis) {
+    const tinkamiFilmai = filmai.filter(filmas => filmas[1] === zanras && filmas[2] >= ivertis);
+    
+    if (tinkamiFilmai.length > 0) {
+        console.log("Jums gali patikti šie filmai:");
+        tinkamiFilmai.forEach(filmas => console.log(filmas[0]));
+    } else {
+        console.log("Deja, neradome jums tinkamų filmų.");
+    }
+}
 
-
-
-
-
+// Testas
+rekomenduotiFilmus([filmas1, filmas2, filmas3], megstamasZanras, norimasIvertis);
