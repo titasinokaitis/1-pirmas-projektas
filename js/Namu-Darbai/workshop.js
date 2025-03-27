@@ -72,3 +72,26 @@ function rekomenduotiFilmus(filmai, zanras, ivertis) {
 
 // Testas
 rekomenduotiFilmus([filmas1, filmas2, filmas3], megstamasZanras, norimasIvertis);
+
+let saule = "*";
+let debeselis = '8';
+
+function funkcija (zenklas) {
+    console.log('rytas' + zenklas);
+    
+}
+console.log('labas');
+    console.log('gabija');
+funkcija(saule);
+funkcija(debeselis);
+
+console.log('------------');
+
+let skaiciusA = 5;
+
+function AddNum (sk) {
+let sum = (8*15-6+17*9/2)/sk
+return sum
+
+}
+console.log(AddNum(skaiciusA));

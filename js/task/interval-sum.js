@@ -47,3 +47,4 @@ console.log('a)', intervalSum(-2, 4));
 console.log('a)', intervalSum(-4, 4));
 console.log('a)', intervalSum(-4, 2));
 console.log('a)', intervalSum(-4, 0));
+
