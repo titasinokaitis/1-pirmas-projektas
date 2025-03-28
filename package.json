@@ -20,6 +20,7 @@
     "nd": "node --watch ./js/Namu-Darbai/1-namu-darbai.js",
     "ws": "node --watch ./js/Namu-Darbai/workshop.js",
     "ndfor": "node --watch ./js/Namu-Darbai/nd-for.js",
+    "ifnd": "node --watch ./js/Namu-Darbai/if-nd.js",
     "if": "node --watch ./js/5-if.js",
     "boolean": "node --watch ./js/4-boolean.js",
     "zodis": "node --watch ./js/zodis.js",

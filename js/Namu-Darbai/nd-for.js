@@ -46,16 +46,45 @@ for (let n = 7; n <= 7; n++) {
 
 
 console.log('8. Atspausdinkite nuo 1 iki 5 žvaigždučių (*) seriją (pvz., *, **, *** ir t. t.).');
-
+ let m = ''
 for (
     
 
     let n = 0 ; n <= 5; n++) {
         
-    console.log('*');
+    console.log(m += '*' );
 }
-//9. Atspausdinkite atvirkštinę eigą su žvaigždutėmis 5 eilutėse (pvz., *****, ****, *** ir t. t.).
-//10. Spausdinti skaičius nuo 1 iki 50, kurie dalijasi iš 3.
-//11. Spausdinti skaičius nuo 1 iki 50 imtinai, kurie dalijasi iš 5.
-//12. Spausdinti skaičius nuo 1 iki 100, kurie dalijasi ir iš 3, ir iš 5.
-//13. Sukurkite for ciklą, kuris penkis kartus išspausdintų "Hello, World!.
+
+console.log('9. Atspausdinkite atvirkštinę eigą su žvaigždutėmis 5 eilutėse (pvz., *****, ****, *** ir t. t.).');
+
+
+
+console.log('10. Spausdinti skaičius nuo 1 iki 50, kurie dalijasi iš 3.');
+
+for (let i = 1; i <= 50; i++) {
+    if (i % 3 === 0) {
+        console.log(i);
+    }
+}
+
+console.log('11. Spausdinti skaičius nuo 1 iki 50 imtinai, kurie dalijasi iš 5.');
+
+for (let i = 1; i <= 50; i++) {
+    if (i % 5 === 0) {
+        console.log(i);
+    }
+}
+
+console.log('12. Spausdinti skaičius nuo 1 iki 100, kurie dalijasi ir iš 3, ir iš 5.');
+
+for (let i = 1; i <= 100; i++) {
+    if (i % 3 === 0 && i % 5 === 0) {
+        console.log(i);
+    }
+}
+
+console.log('13. Sukurkite for ciklą, kuris penkis kartus išspausdintų "Hello, World!.');
+
+for (let i = 0; i < 5; i++) {
+    console.log("Hello, World!");
+}
