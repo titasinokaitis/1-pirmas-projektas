@@ -210,7 +210,19 @@ jei perduotas kintamasis nėra skaičiaus tipo,
  tai išveda pranešimą “Pateikta netinkamo tipo reikšmė.”
 priešingu atveju, funkcija tęsia darbą
 į atskirą kintamąjį įsimena skaičių sudarančių skaitmenų kiekį
-gražina skaitmenų kiekį
+gražina skaitmenų kiekį*/
+
+function skaitmenuKiekisSkaiciuje(num) {
+    if (typeof num !== 'number' || isNaN(num)) {
+        console.log("Pateikta netinkamo tipo reikšmė.");
+        return;
+    }
+    
+    const digitCount = Math.abs(num).toString().replace('.', '').length;
+    return digitCount;
+}
+
+/*
 TESTAI:
 console.log( skaitmenuKiekisSkaiciuje( 5 ) );
 rezultatas: 1
