@@ -6,3 +6,6 @@ console.log(1,2,3);
 
 console.log("Labas rytas, Lietuva");
 console.log('protinga matematika:'); 
+
+
+console.log(a);
