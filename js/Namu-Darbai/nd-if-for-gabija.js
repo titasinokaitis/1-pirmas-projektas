@@ -57,12 +57,31 @@ console.log(einamasTekstas);
  //Susikurkite sąrašą 10 miestų, kuriame būtų įvardinami miesto pavadinimai ir jų atstumai iki Vilniaus.
 
  const miestaiIrKilometrai = ['Kaunas', 100, 'KLaipeda', 310, 'Siauliai', 210, 'Panevezys', 135, 'Alytus', 110, 'Marijampole', 140, 'Utena', 95, 'Druskininkai', 132, 'Telsiai', 270];
+ function toliausiasMiestas(greitisKmh, valandos) {
 
- //Parašykite funkciją, kuri pasakytų, kur toliausiai nuvažiuotume važiuodami x km/h greičiu per y valandų
-const nuvaziuotasAtstumas =
+    const miestai = {
+        "Kaunas": 100,
+        "Klaipėda": 310,
+        "Šiauliai": 210,
+        "Panevėžys": 135,
+        "Alytus": 110,
+        "Marijampolė": 140,
+        "Utena": 95,
+        "Druskininkai": 130,
+        "Telšiai": 270,
+        "Mažeikiai": 290
+    }
+    };
+ 
+console.log(miestaiIrKilometrai);
+
+
 
  for ( let i = 0; i < miestaiIrKilometrai.length; i += 2){
     const miestas = miestaiIrKilometrai[i];
     const atstumas = miestaiIrKilometrai[i+1];
+let tolimiausias = null
+let maxAtstumas = 0
 
+for(const [miestas, atstumas])
  }
