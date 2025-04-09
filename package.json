@@ -5,6 +5,9 @@
   "main": "index.js",
   "scripts": {
     "function": "node --watch ./js/3-function.js",
+    "sort": "node --watch ./js/19-sort.js",
+    "reduce": "node --watch ./js/20-reduce.js",
+    "des-rest": "node --watch ./js/21-destrukturizavimas-rest.js",
     "adult": "node --watch ./js/task/adult.js",
     "textsize": "node --watch ./js/task/text-size.js",
     "bignum": "node --watch ./js/task/biggest-number.js",
