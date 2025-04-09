@@ -47,3 +47,4 @@ console.log(p312);
 
 const p4 = { d: 4, ...p3, c: 99 };
 console.log(p4);
+
