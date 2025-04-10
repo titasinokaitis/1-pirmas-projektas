@@ -273,6 +273,62 @@ console.log( didziausiasSkaiciusSarase( [] ) );
 
 console.log('Funkcija pavadinimu “isrinktiRaides”: priima du kintamuosius: pirmasis nurodo tekstą, su kuriuo reikės atlikti užduotį antrasis nurodo kas kelintą raidę išrinkti patikrinti, ar pirmasis kintamasis yra teksto tipo: jei ne, išvedame pranešimą “Pirmasis kintamasis yra netinkamo tipo.” priešingu atveju tęsiame darbą patikrinti, ar pirmasis kintamasis yra ne tuščias tekstas ir ne didesnis nei 100 simbolių: jei ne, išvedame pranešimą “Pirmojo kintamojo reikšmė yra netinkamo dydžio.” priešingu atveju tęsiame darbą patikrinti, ar antrasis kintamasis yra skaičiaus tipo: jei ne, išvedame pranešimą “Antrasis kintamasis yra netinkamo tipo.” priešingu atveju tęsiame darbą patikriname, ar antrojo kintamojo vertė yra didesnė už nulį: jei ne, išvedame pranešimą “Antrasis kintamasis turi būti didesnis už nulį.” priešingu atveju tęsiame darbą patikriname, ar antrojo kintamojo vertė yra ne didesnė už pirmojo kintamojo ilgį: jei ne, išvedame pranešimą “Antrasis kintamasis turi būti ne didesnis už pateikto teksto ilgį.” priešingu atveju tęsiame darbą išrenkame iš nurodyto teksto kas kelintą raidę (pagal antrojo kintamojo žingsnį) išrinktas raides sudėti į atskirą kintamąjį, kuris yra teksto tipo gražina rezultatą');
 
+console.log('\n 2 užd Parašykite funkcija, kuri parodytų kiek žmonių reikia norint pakelti tam tikro svorio krovinį, kai vienas žmogus gali pakelti x kg. Pvz: 10kg svorį turi kelti 5 žmonės, jei vienas jų gali pakelti 2.4 kg');
 
 
+function kiekZmoniuReikia(krovinioSvoris, vienoZmogausGalia) {
+    if (vienoZmogausGalia <= 0) {
+        console.log("Vienas žmogus turi galėti pakelti bent kažkiek svorio!");
+        return;
+    }
+
+    const kiekZmoniu = Math.ceil(krovinioSvoris / vienoZmogausGalia);
+    console.log(`Reikia ${kiekZmoniu} žmonių, kad pakeltų ${krovinioSvoris} kg krovinį, jei vienas gali pakelti ${vienoZmogausGalia} kg.`);
+    return kiekZmoniu;
+}
+
+console.log(kiekZmoniuReikia(60, 5));
+
+// ) Statybos. Yra planuojamas namo statymas. Parašykite funkciją, kuri, gavusi norimą namo aukštį, grąžintų kiek aukštų turės namas. Namo aukštis yra paduodamas tik sveiku skaičiumi. Vieno aukšto aukštis gali būti 2 arbe 2.5m aukščio. Vadinasi, 6 metrų namas turės 3 aukštus (po 2 m), o 5 metrų namas turės 2 aukštus (po 2.5). Taupant vietą yra dedamas prioritetas didesniam aukštų skaičiui - jei namo aukštis yra 10 metrų, jis turės 5 2m aukštus. Jei namas yra 7 metrų aukščio, jis turės 2 aukštus 2.5 aukščio ir vieną 2 metrų aukščio aukštą
+
+
+
+console.log('\n Padarykite funkciją, kuriai perdavus vieną iš (akmuo, popierius, šulinys) reikšmių, kompiuteris su jumi sužaistų vaskiči raundą ir išvestų rezultatą į console. Kompiuterio pasirinkimai turi būti atsitiktiniai.');
+
+
+
+function zaistiRaunda(zaidejoPasirinkimas) {
+    const pasirinkimai = ['akmuo', 'popierius', 'sulinys'];
+    const kompiuterioPasirinkimas = pasirinkimai[Math.floor(Math.random() * pasirinkimai.length)];
+
+    zaidejoPasirinkimas = zaidejoPasirinkimas.toLowerCase();
+
+    if (!pasirinkimai.includes(zaidejoPasirinkimas)) {
+        console.log("Neteisingas pasirinkimas. Rinkitės: akmuo, popierius arba sulinys.");
+        return;
+    }
+
+    console.log(`Jūs pasirinkote: ${zaidejoPasirinkimas}`);
+    console.log(`Kompiuteris pasirinko: ${kompiuterioPasirinkimas}`);
+
+    if (zaidejoPasirinkimas === kompiuterioPasirinkimas) {
+        console.log("Lygiosios!");
+    } else if (
+        (zaidejoPasirinkimas === 'akmuo' && kompiuterioPasirinkimas === 'sulinys') ||
+        (zaidejoPasirinkimas === 'popierius' && kompiuterioPasirinkimas === 'akmuo') ||
+        (zaidejoPasirinkimas === 'sulinys' && kompiuterioPasirinkimas === 'popierius')
+    ) {
+        console.log("Jūs laimėjote!");
+    } else {
+        console.log("Kompiuteris laimėjo!");
+    }
+}
+
+zaistiRaunda('akmuo');
+zaistiRaunda('popierius');
+zaistiRaunda('popierius');
+zaistiRaunda('sulinys');
+
+
+console.log('\n 4. Kalėdų senelis pakeitė darbą ir tapo gimtadienio dėde. Vietoj gerų ir blogų vaikų, jis dosniai apdovanoja ypatingus gimtadienius (1, 5, 10, 15, 16, 18, 20 ir visi kiti jubiliejai) ir nelabai gerai apdovanoja paprastus gimtadienius. Padarykite du sąrašus - vieną su nuostabiomis dovanomis (vienaragis, pilis, mašina, ...), kitą su nefainomis dovanomis (kojinės, ananasas, jau skaityta knyga, ...). Padarykite funkciją, kuriai pateikus jūsų metus, ji pasveikins su gimtadieniu ir padovanos atitinkamą dovaną.');
 
