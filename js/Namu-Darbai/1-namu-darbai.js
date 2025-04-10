@@ -233,11 +233,11 @@ console.log('Funkcija pavadinimu “didziausiasSkaiciusSarase”: priima vieną 
 
 function didziausiasSkaiciusSarase (list) {
     if (!Array.isArray(list)) {
-        return 'Pateikta netinkamo tipo reiksme.';
+        return '\n Pateikta netinkamo tipo reiksme.';
     }
 
     if (list.length === 0) {
-        return 'Pateiktas Sarasas negali buti tuscias.';
+        return '\n Pateiktas Sarasas negali buti tuscias.';
     }
 
     let biggest = -Infinity;
@@ -255,23 +255,65 @@ function didziausiasSkaiciusSarase (list) {
     return biggest;
 }
 
-//TESTAI:
-console.log( didziausiasSkaiciusSarase( [ 1 ] ) );
-//rezultatas: 1
-console.log( didziausiasSkaiciusSarase( [ 1, 2, 3 ] ) );
-//rezultatas: 3
-console.log( didziausiasSkaiciusSarase( [ -5, 78, 14, 0, 18 ] ) );
-//rezultatas: 78
-console.log( didziausiasSkaiciusSarase( [ 69, 69, 69, 69, 66 ] ) );
-//rezultatas: 69
-console.log( didziausiasSkaiciusSarase( [ -1, -2, -3, -4, -5, -6, -7, -8 ] ) );
-//rezultatas: -1
-console.log( didziausiasSkaiciusSarase( 'pomidoras' ) );
-//rezultatas: “Pateikta netinkamo tipo reikšmė.”
-console.log( didziausiasSkaiciusSarase( [] ) );
-//rezultatas: “Pateiktas sąrašas negali būti tuščias.”
 
-console.log('Funkcija pavadinimu “isrinktiRaides”: priima du kintamuosius: pirmasis nurodo tekstą, su kuriuo reikės atlikti užduotį antrasis nurodo kas kelintą raidę išrinkti patikrinti, ar pirmasis kintamasis yra teksto tipo: jei ne, išvedame pranešimą “Pirmasis kintamasis yra netinkamo tipo.” priešingu atveju tęsiame darbą patikrinti, ar pirmasis kintamasis yra ne tuščias tekstas ir ne didesnis nei 100 simbolių: jei ne, išvedame pranešimą “Pirmojo kintamojo reikšmė yra netinkamo dydžio.” priešingu atveju tęsiame darbą patikrinti, ar antrasis kintamasis yra skaičiaus tipo: jei ne, išvedame pranešimą “Antrasis kintamasis yra netinkamo tipo.” priešingu atveju tęsiame darbą patikriname, ar antrojo kintamojo vertė yra didesnė už nulį: jei ne, išvedame pranešimą “Antrasis kintamasis turi būti didesnis už nulį.” priešingu atveju tęsiame darbą patikriname, ar antrojo kintamojo vertė yra ne didesnė už pirmojo kintamojo ilgį: jei ne, išvedame pranešimą “Antrasis kintamasis turi būti ne didesnis už pateikto teksto ilgį.” priešingu atveju tęsiame darbą išrenkame iš nurodyto teksto kas kelintą raidę (pagal antrojo kintamojo žingsnį) išrinktas raides sudėti į atskirą kintamąjį, kuris yra teksto tipo gražina rezultatą');
+console.log( didziausiasSkaiciusSarase( [ 1 ] ) );
+
+console.log( didziausiasSkaiciusSarase( [ 1, 2, 3 ] ) );
+
+console.log( didziausiasSkaiciusSarase( [ -5, 78, 14, 0, 18 ] ) );
+
+console.log( didziausiasSkaiciusSarase( [ 69, 69, 69, 69, 66 ] ) );
+console.log( didziausiasSkaiciusSarase( [ -1, -2, -3, -4, -5, -6, -7, -8 ] ) );
+
+console.log( didziausiasSkaiciusSarase( 'pomidoras' ) );
+
+console.log( didziausiasSkaiciusSarase( [] ) );
+
+console.log('\n Funkcija pavadinimu “isrinktiRaides”: priima du kintamuosius: pirmasis nurodo tekstą, su kuriuo reikės atlikti užduotį antrasis nurodo kas kelintą raidę išrinkti patikrinti, ar pirmasis kintamasis yra teksto tipo: jei ne, išvedame pranešimą “Pirmasis kintamasis yra netinkamo tipo.” priešingu atveju tęsiame darbą patikrinti, ar pirmasis kintamasis yra ne tuščias tekstas ir ne didesnis nei 100 simbolių: jei ne, išvedame pranešimą “Pirmojo kintamojo reikšmė yra netinkamo dydžio.” priešingu atveju tęsiame darbą patikrinti, ar antrasis kintamasis yra skaičiaus tipo: jei ne, išvedame pranešimą “Antrasis kintamasis yra netinkamo tipo.” priešingu atveju tęsiame darbą patikriname, ar antrojo kintamojo vertė yra didesnė už nulį: jei ne, išvedame pranešimą “Antrasis kintamasis turi būti didesnis už nulį.” priešingu atveju tęsiame darbą patikriname, ar antrojo kintamojo vertė yra ne didesnė už pirmojo kintamojo ilgį: jei ne, išvedame pranešimą “Antrasis kintamasis turi būti ne didesnis už pateikto teksto ilgį.” priešingu atveju tęsiame darbą išrenkame iš nurodyto teksto kas kelintą raidę (pagal antrojo kintamojo žingsnį) išrinktas raides sudėti į atskirą kintamąjį, kuris yra teksto tipo gražina rezultatą');
+
+function isrinktiRaides(tekstas, kasKelintaRaide) {
+    
+    if (typeof tekstas !== 'string') {
+        console.log("\n Pirmasis kintamasis yra netinkamo tipo.");
+        return;
+    }
+
+    if (tekstas === '' || tekstas.length > 100) {
+        console.log("\n Pirmojo kintamojo reikšmė yra netinkamo dydžio.");
+        return;
+    }
+
+    if (typeof kasKelintaRaide !== 'number') {
+        console.log("\n Antrasis kintamasis yra netinkamo tipo.");
+        return;
+    }
+
+    if (kasKelintaRaide <= 0) {
+        console.log("\n Antrasis kintamasis turi būti didesnis už nulį.");
+        return;
+    }
+
+    if (kasKelintaRaide > tekstas.length) {
+        console.log("\n Antrasis kintamasis turi būti ne didesnis už pateikto teksto ilgį.");
+        return;
+    }
+
+    let isrinktosRaides = '';
+    for (let i = kasKelintaRaide - 1; i < tekstas.length; i += kasKelintaRaide) {
+        isrinktosRaides += tekstas[i];
+    }
+
+    
+    console.log(isrinktosRaides);
+    return isrinktosRaides;
+}
+
+
+console.log(isrinktiRaides("JavaScript yra smagus!", 3)); 
+console.log(isrinktiRaides("Tai testas", 5)); 
+console.log(isrinktiRaides("Kalėdų senelis", 6)); 
+console.log(isrinktiRaides("Labas", -1)); 
+console.log(isrinktiRaides(12345, 2)); 
 
 console.log('\n 2 užd Parašykite funkcija, kuri parodytų kiek žmonių reikia norint pakelti tam tikro svorio krovinį, kai vienas žmogus gali pakelti x kg. Pvz: 10kg svorį turi kelti 5 žmonės, jei vienas jų gali pakelti 2.4 kg');
 
@@ -325,10 +367,61 @@ function zaistiRaunda(zaidejoPasirinkimas) {
 }
 
 zaistiRaunda('akmuo');
-zaistiRaunda('popierius');
-zaistiRaunda('popierius');
-zaistiRaunda('sulinys');
+console.log(zaistiRaunda('popierius'));
+console.log(zaistiRaunda('popierius'));
+console.log(zaistiRaunda('sulinys'));
 
 
 console.log('\n 4. Kalėdų senelis pakeitė darbą ir tapo gimtadienio dėde. Vietoj gerų ir blogų vaikų, jis dosniai apdovanoja ypatingus gimtadienius (1, 5, 10, 15, 16, 18, 20 ir visi kiti jubiliejai) ir nelabai gerai apdovanoja paprastus gimtadienius. Padarykite du sąrašus - vieną su nuostabiomis dovanomis (vienaragis, pilis, mašina, ...), kitą su nefainomis dovanomis (kojinės, ananasas, jau skaityta knyga, ...). Padarykite funkciją, kuriai pateikus jūsų metus, ji pasveikins su gimtadieniu ir padovanos atitinkamą dovaną.');
 
+
+console.log('\n Statome namą iš plytų. Vienos plytos plotis yra 0.2 metrai, o aukštis yra 0.1 metro. Parašykite funkcij , kuriai nurodžius namo išmatavimus (plotis, ilgis, aukštis), ji apskaičiuotųk iek plytų reikės dėti. (PVZ jei ilgis yra 1m, plotis 2m aukštis yra 2m, turime dėti 600 plytų)');
+
+function skaiciuotiPlytas(plotis, ilgis, aukstis) {
+    const plytosPlotis = 0.2; 
+    const plytosAukstis = 0.1; 
+
+    const sienosPlotas = 2 * (ilgis * aukstis + plotis * aukstis); 
+
+    const plytosPlotas = plytosPlotis * plytosAukstis;
+
+    const kiekis = Math.ceil(sienosPlotas / plytosPlotas);
+
+    console.log(`\n Namo sienoms reikės maždaug ${kiekis} plytų.`);
+    return kiekis;
+}
+console.log(skaiciuotiPlytas(2, 1, 2));
+console.log(skaiciuotiPlytas(4, 2, 3));
+console.log(skaiciuotiPlytas(1, 3, 5));
+
+
+console.log('\n  Statyti namą kainuoja. Kiekvienas namas turi 1 duris, x plytų ir 6 langus kiekviename aukšte. Padarykite funkciją, kuriai pateikus plytų, langų ir durų kainą; bei namo plotį, ilgį ir aukštį - ji paskaičiuotų kiek eurų kainuotų pastatyti norimą namą.');
+
+function skaiciuotiStatybosKaina(plytosKaina, langoKaina, duruKaina, plotis, ilgis, aukstis) {
+    const plytosPlotis = 0.2; 
+    const plytosAukstis = 0.1; 
+
+    
+    const sienuPlotas = 2 * (ilgis * aukstis + plotis * aukstis); 
+    const vienosPlytosPlotas = plytosPlotis * plytosAukstis;
+    const plytuKiekis = Math.ceil(sienuPlotas / vienosPlytosPlotas);
+
+    
+    const aukstuSkaicius = Math.floor(aukstis / 2); 
+    const languKiekis = aukstuSkaicius * 6;
+
+    const duruKiekis = 5;
+
+
+    const bendraKaina =
+        (plytuKiekis * plytosKaina) +
+        (languKiekis * langoKaina) +
+        (duruKiekis * duruKaina);
+
+    console.log(`Statybos kaina: ${bendraKaina.toFixed(2)} EUR`);
+    return bendraKaina;
+}
+
+
+console.log(skaiciuotiStatybosKaina(0.5, 100, 250, 5, 10, 6)); 
+console.log(skaiciuotiStatybosKaina(2, 150, 400, 10, 20, 30)); 
